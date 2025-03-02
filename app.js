@@ -3,9 +3,9 @@ const app = express();
 const { AppDataSource } = require("./data-source.js");
 // const { Airport } = require("./models/airport.js");
 AppDataSource.initialize();
-
-app.listen(3007, () => {
-  console.log("Server running on http://localhost:3007");
+const PORT = process.env.PORT || 3007;
+app.listen(PORT, () => {
+  console.log(`Server running on`);
 });
 
 // /api/airport/:iata_code
